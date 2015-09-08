@@ -1,0 +1,24 @@
+%h1 Historical Data
+
+%table.sample
+  %tr.headers
+    %th ID
+    %th Gender
+    %th Height
+    %th Weight
+    %th Guess
+  - @candidates.each do |candidate|
+    %tr{id: "candidate_#{candidate.id}"}
+      %td= candidate.id
+      %td= candidate.gender
+      %td= candidate.height
+      %td= candidate.weight
+      %td= candidate.guess
+      %td
+        = link_to "Show", candidate_path(candidate)
+      %td
+        = link_to "Edit", edit_candidate_path(candidate)
+      %td
+        = link_to "Delete", candidate_path(candidate), method: :delete, data: { confirm: "Are you sure?" }
+
+.back= link_to "Back to home", :root

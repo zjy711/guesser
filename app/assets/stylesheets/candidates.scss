@@ -1,0 +1,29 @@
+// Place all the styles related to the candidates controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body  {
+  width: 80%;
+  margin: auto;
+}
+
+th {
+  width: 15%;
+}
+
+td {
+  text-align: center;
+}
+
+.back {
+  margin-top: 30px;
+}
+
+.candidate_detail
+  div {
+    margin-top: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }

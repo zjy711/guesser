@@ -1,0 +1,24 @@
+default: &default
+  adapter:   mysql2
+  encoding:  utf8
+  username:  root
+  password:
+  host:      127.0.0.1
+  reconnect: true
+  pool:      5
+  timeout:   5000
+
+development:
+  <<: *default
+  database: guesser_development
+
+test: &test
+  <<: *default
+  database: guesser_test
+
+production:
+  <<: *default
+  database: guesser_production
+
+cucumber:
+  <<: *default

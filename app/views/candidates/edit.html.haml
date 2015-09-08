@@ -1,0 +1,14 @@
+%h1 Edit a guess! Put the correct gender for candidate to improve prediction accuracy!
+
+= form_for @candidate, html: { class: 'new_candidate_form' } do |f|
+  .height
+    = f.label :height
+    = f.text_field :height, placeholder: "Height in CM"
+  .weight
+    = f.label :weight
+    = f.text_field :weight, placeholder: "Weight in LBs"
+  .gender
+    = f.label :gender
+    = f.text_field :gender, placeholder: "Correct gender"
+
+  = f.submit "Update candidate information!", url: candidate_path(@candidate), method: :patch

@@ -1,0 +1,10 @@
+%h1 Welcome to take a guess!
+
+= form_for @candidate, html: { class: 'new_candidate_form' } do |f|
+  .height
+    = f.label :height
+    = f.text_field :height, placeholder: "Height in CM"
+  .weight
+    = f.label :weight
+    = f.text_field :weight, placeholder: "Weight in LBs"
+  = f.submit "Guess!"
